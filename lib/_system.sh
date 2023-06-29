@@ -19,7 +19,7 @@ system_create_user() {
   usermod -aG sudo deploy
 EOF
 
-  read -p "8 - SuperAdmim criado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
@@ -39,7 +39,7 @@ system_git_clone() {
   git clone ${link_git} /home/deploy/${instancia_add}/
 EOF
 
-  read -p "9 - Download efetuado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
@@ -59,7 +59,7 @@ system_update() {
   sudo apt-get install -y libxshmfence-dev libgbm-dev wget unzip fontconfig locales gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
 EOF
 
-  read -p "1 - Atualização Concluida - Pressione [Enter]"
+  sleep 2
 }
 
 
@@ -278,7 +278,7 @@ system_node_install() {
   printf "${WHITE} 💻 Instalando nodejs...${GRAY_LIGHT}"
   printf "\n\n"
 
-  read -p "2 - Node Instalado - Pressione [Enter]"
+  sleep 2
 
   sudo su - root <<EOF
   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -294,7 +294,7 @@ system_node_install() {
   
 EOF
 
-  read -p "2 - Node Instalado - Pressione [Enter]"
+  sleep 2
 }
 #######################################
 # installs docker
@@ -320,7 +320,7 @@ system_docker_install() {
   apt install -y docker-ce
 EOF
 
-  read -p "4 - Docker Instalado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
@@ -387,7 +387,7 @@ system_puppeteer_dependencies() {
                       xdg-utils
 EOF
 
-  read -p "5 - Puppeteer Instalado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
@@ -407,7 +407,7 @@ system_pm2_install() {
 
 EOF
 
-  read -p "3 - PM2 Instalado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
@@ -428,7 +428,7 @@ system_snapd_install() {
   snap refresh core
 EOF
 
-  read -p "6 - Snapd Instalado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
@@ -449,7 +449,7 @@ system_certbot_install() {
   ln -s /snap/bin/certbot /usr/bin/certbot
 EOF
 
-  read -p "8 - Certbot Instalado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
@@ -469,7 +469,7 @@ system_nginx_install() {
   rm /etc/nginx/sites-enabled/default
 EOF
 
-  read -p "7 - NGINX Instalado - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################

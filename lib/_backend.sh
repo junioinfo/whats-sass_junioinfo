@@ -56,17 +56,17 @@ backend_set_env() {
 sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/backend/.env
 NODE_ENV=
-BACKEND_URL=whatsapp.junioinformatica.com.br
-FRONTEND_URL=api.junioinformatica.com.br
+BACKEND_URL=${backend_url}
+FRONTEND_URL=${frontend_url}
 PROXY_PORT=443
-PORT=4000
+PORT=${backend_port}
 
 DB_HOST=localhost
 DB_DIALECT=postgres
 DB_PORT=5432
-DB_USER=junioinformatica
-DB_PASS=Info587800
-DB_NAME=junioinformatica
+DB_USER=${instancia_add}
+DB_PASS=${mysql_root_password}
+DB_NAME=${instancia_add}
 
 JWT_SECRET=${jwt_secret}
 JWT_REFRESH_SECRET=${jwt_refresh_secret}
@@ -82,7 +82,7 @@ CLOSED_SEND_BY_ME=true
 [-]EOF
 EOF
 
-  read -p "10 - Configuração de Sucesso - Pressione [Enter]"
+  sleep 2
 }
 
 #######################################
