@@ -1,11 +1,11 @@
 # Instalador do Whatsapp
 
-   ___                _          _____          __                                 _    _              
-  |_  |              (_)        |_   _|        / _|                               | |  (_)             
-    | | _   _  _ __   _   ___     | |   _ __  | |_   ___   _ __  _ __ ___    __ _ | |_  _   ___   __ _ 
-    | || | | || '_ \ | | / _ \    | |  | '_ \ |  _| / _ \ | '__|| '_ ` _ \  / _` || __|| | / __| / _` |
-/\__/ /| |_| || | | || || (_) |  _| |_ | | | || |  | (_) || |   | | | | | || (_| || |_ | || (__ | (_| |
-\____/  \__,_||_| |_||_| \___/   \___/ |_| |_||_|   \___/ |_|   |_| |_| |_| \__,_| \__||_| \___| \__,_|
+#   ___                _          _____          __                                 _    _              
+#  |_  |              (_)        |_   _|        / _|                               | |  (_)             
+#    | | _   _  _ __   _   ___     | |   _ __  | |_   ___   _ __  _ __ ___    __ _ | |_  _   ___   __ _ 
+#    | || | | || '_ \ | | / _ \    | |  | '_ \ |  _| / _ \ | '__|| '_ ` _ \  / _` || __|| | / __| / _` |
+#/\__/ /| |_| || | | || || (_) |  _| |_ | | | || |  | (_) || |   | | | | | || (_| || |_ | || (__ | (_| |
+#\____/  \__,_||_| |_||_| \___/   \___/ |_| |_||_|   \___/ |_|   |_| |_| |_| \__,_| \__||_| \___| \__,_|
 
 
 - Para Instalar Tenha uma VPS de no mínimo 2GB re Ram
@@ -47,25 +47,17 @@ Passo 5 - Acesse a Pasta onde foi baixado este instalador.
   ```bash
 	sudo apt install -y git && git clone https://github.com/junioinfo/whats-sass_junioinfo.git install_whaticket && sudo chmod -R 777 install_whaticket  && cd install_whaticket  && sudo ./install_primaria
   ```
-
-	Agora é só seguir os passos do instalador e pronto.
+	- Agora é só seguir os passos do instalador e pronto.
 # Whatsticket - Essas perguntas serão respondidas diretamente no Terminal.
 	
 	[0] Instalar WhatsPainel
 	Informe um nome para a Instancia/Empresa que será instalada (Não utilizar espaços ou caracteres especiais, Utilizar Letras minúsculas;):
-
 	Informe a Qt. de de Conexões/Whats que a poderá cadastrar: 1 a 9999
-
 	Informe a Qt. de de Usuários/Atendentes que a poderá cadastrar: de 1 a 9999
-
-	Digite o domínio do FRONTEND/PAINEL; Ex: appbot.cloud
-
-	Digite o domínio do BACKEND/API; Ex: api.appbot.cloud
-
+	Digite o domínio do FRONTEND/PAINEL; Ex: chat.dominio.com
+	Digite o domínio do BACKEND/API; Ex: api.dominio.com
 	Digite a porta do FRONTEND para a appbot; Ex: 3000 A 3999
-
 	Digite a porta do BACKEND para esta instancia; Ex: 4000 A 4999
-
 	Digite a porta do REDIS/AGENDAMENTO MSG para a appbot; Ex: 5000 A 5999 = padrão do redis é 6379
 	
 	
