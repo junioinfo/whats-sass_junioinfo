@@ -1,13 +1,5 @@
 # Instalador do Whatsapp
 
-#   ___                _          _____          __                                 _    _              
-#  |_  |              (_)        |_   _|        / _|                               | |  (_)             
-#    | | _   _  _ __   _   ___     | |   _ __  | |_   ___   _ __  _ __ ___    __ _ | |_  _   ___   __ _ 
-#    | || | | || '_ \ | | / _ \    | |  | '_ \ |  _| / _ \ | '__|| '_ ` _ \  / _` || __|| | / __| / _` |
-#/\__/ /| |_| || | | || || (_) |  _| |_ | | | || |  | (_) || |   | | | | | || (_| || |_ | || (__ | (_| |
-#\____/  \__,_||_| |_||_| \___/   \___/ |_| |_||_|   \___/ |_|   |_| |_| |_| \__,_| \__||_| \___| \__,_|
-
-
 - Para Instalar Tenha uma VPS de no mínimo 2GB re Ram
 - Utilize o Sistema Operacional Linux Ubuntu 18 ou 20
 - Para Executar os comandos utilize o Software 'Putty' ou 'Bitvise SSH Client'
