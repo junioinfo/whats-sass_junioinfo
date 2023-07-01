@@ -42,6 +42,11 @@ EOF
   sleep 2
 }
 
+system_continue() {
+  print_banner
+	printf "${WHITE} 💻 Aguarde...${GRAY_LIGHT}"
+  sleep 2
+}
 #######################################
 # updates system
 # Arguments:
@@ -59,7 +64,7 @@ system_update() {
   sudo apt-get install -y libxshmfence-dev libgbm-dev wget unzip fontconfig locales gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
 EOF
 
-  sleep 2
+  system_options
 }
 
 
@@ -294,7 +299,7 @@ system_node_install() {
   
 EOF
 
-  sleep 2
+  system_options
 }
 #######################################
 # installs docker
@@ -320,7 +325,7 @@ system_docker_install() {
   apt install -y docker-ce
 EOF
 
-  sleep 2
+  system_options
 }
 
 #######################################
@@ -387,7 +392,7 @@ system_puppeteer_dependencies() {
                       xdg-utils
 EOF
 
-  sleep 2
+  system_options
 }
 
 #######################################
@@ -407,7 +412,7 @@ system_pm2_install() {
 
 EOF
 
-  sleep 2
+  system_options
 }
 
 #######################################
@@ -428,7 +433,7 @@ system_snapd_install() {
   snap refresh core
 EOF
 
-  sleep 2
+  system_options
 }
 
 #######################################
@@ -449,7 +454,7 @@ system_certbot_install() {
   ln -s /snap/bin/certbot /usr/bin/certbot
 EOF
 
-  sleep 2
+  system_options
 }
 
 #######################################
@@ -469,7 +474,7 @@ system_nginx_install() {
   rm /etc/nginx/sites-enabled/default
 EOF
 
-  sleep 2
+  system_options
 }
 
 #######################################
@@ -539,4 +544,66 @@ system_certbot_setup() {
 EOF
 
   sleep 2
+}
+
+system_options() {
+  
+  print_banner
+  printf "${WHITE} 💻 Passos para instalação ${GRAY_LIGHT}"
+  printf "\n\n"
+  printf "   [0] Instalar Node.js\n"
+  printf "   [1] Instalar Pm2\n"
+  printf "   [2] Instalar Docker\n"
+  printf "   [3] Instalar Puppeteer\n"
+  printf "   [4] Instalar Snapd\n"
+  printf "   [5] Instalar Nginx\n"
+  printf "   [6] Instalar Certbot\n"
+  printf "   [7] System Update\n"
+  printf "${WHITE} Continue apos instalar todas dependencias"
+  printf "   [9] Continuar\n"
+  printf "\n"
+  read -p "> " option
+
+  case "${option}" in
+    0)
+	  system_node_install
+	  exit
+	  ;;
+
+    1) 
+      system_pm2_install 
+      exit
+      ;;
+
+    2) 
+      system_docker_install 
+      exit
+      ;;
+    3) 
+      system_puppeteer_dependencies 
+      exit
+      ;;
+    4) 
+      system_snapd_install 
+      exit
+      ;;
+    5) 
+      system_nginx_install 
+      exit
+      ;; 
+	6) 
+      system_certbot_install 
+      exit
+      ;;
+	7) 
+      system_update 
+      exit
+      ;;   
+	9) 
+      system_continue 
+      exit
+      ;; 	  
+
+    *) exit ;;
+  esac
 }
